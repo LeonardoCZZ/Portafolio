@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Tienda Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .nav-menu{
+                display: flex;
+                height: fit-content;
+                width: 100%;
+                background-color: black;
+                color: white;
+            }
+            
+            .nav-link{
+                text-decoration: none;
+                color: inherit;
+            }
+            nav-menu-item{
+                color: yellow;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            
+            .logo{
+                font-size: 30px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-menu">
+                <a href="index.html" class="logo nav-link"></a>
+                <ul>
+                    <li>
+                        <a class="nav-link nav-menu-item" href="formulario.html"></a>
+                        <a class="nav-link nav-menu-item" href="formulario.html"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Formulario Usuario</h1>
+        <form action="form.js"> 
+            <label>Username:</label>
+            <input type="text" name="username">
+            
+            <input type="submit" name="submit" value="enviar">
+        </form>
+    </body>
+</html>

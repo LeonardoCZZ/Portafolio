@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Tienda en línea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+            }
+
+            .nav-menu {
+                align-items: center;
+                display: flex;
+                width: 100%;
+                background-color: black;
+                color: white;
+                padding: 10px 30px;
+            }
+
+            .nav-link {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .nav-menu-item {
+                color: yellow;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .logo {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .menu-list {
+                list-style: none;
+                display: flex;
+            }
+
+            .menu-list li {
+                margin-right: 10px;
+            }
+
+            h1, p {
+                text-align: center;
+            }
+
+            figure {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            audio, video, iframe {
+                display: block;
+                margin: 0 auto;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-menu">
+                <a href="index.html" class="logo nav-link">Home</a>
+                <ul class="menu-list">
+                    <li>
+                        <a class="nav-link nav-menu-item" href="formulario.html">Form 1</a>
+                        <a class="nav-link nav-menu-item" href="formulario.html">Form 2</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Página Inicial</h1>
+        <p>Esta es la primera página del curso WEB y Patrones...</p>
+        <figure>
+            <audio controls>
+                <source src="./audios/musica.mp3" type="audio/mpeg">
+                No se soporta este tipo de <code>audio</code>
+            </audio>
+        </figure>
+        <figure>
+            <video controls autoplay width="320" height="240">
+                <source src="./video/torpedo.mp4" type="video/mp4">
+                No se soporta este tipo de <code>video</code>
+            </video>
+            <figcaption>Realizado en 2023</figcaption>
+        </figure>
+        <figure>
+            <iframe src="https://ameliarueda.com" width="400" height="350"></iframe>
+        </figure>
+    </body>
+</html>
