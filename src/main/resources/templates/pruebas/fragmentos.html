@@ -51,6 +51,7 @@
                                             <td class="text-center">[[${producto.existencias}]]</td>
                                             <td class="text-end">[[${producto.precio}*${producto.existencias}]]</td>
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
+                                             <td sec:authorize="hasRole('ROLE_ADMIN')">
                                         </tr>
                                     </tbody>
                                 </table>
