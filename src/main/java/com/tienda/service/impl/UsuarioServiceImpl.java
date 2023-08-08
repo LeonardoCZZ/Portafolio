@@ -26,11 +26,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     private RolDao rolDao;
     
     @Override
-    @Transactional (readOnly = true)
-    public List <Usuario> getUsuarios (){
+    @Transactional(readOnly = true)
+    public List<Usuario> getUsuarios() {
         return usuarioDao.findAll();
     }
-    
+
     @Override
     @Transactional (readOnly = true)
     public Usuario getUsuario (Usuario usuario) {
@@ -55,9 +55,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
     
     @Override
-    @Transactional (readOnly = true)
-    public boolean existeUsuarioPorUsernameOCorreo(String username, String correo){
-        return usuarioDao.existsUsernameOrCorreo(username, correo);
+    @Transactional(readOnly = true)
+    public boolean existeUsuarioPorUsernameOCorreo(String username, String correo) {
+        return usuarioDao.existsByUsernameOrCorreo(username, correo);
     }
     
     @Override
@@ -78,13 +78,4 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioDao.delete(usuario);
     }
 
-    @Override
-    public List<Usuario> getUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public boolean existsUsuarioPorUsernameOCorreo(String username, String correo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

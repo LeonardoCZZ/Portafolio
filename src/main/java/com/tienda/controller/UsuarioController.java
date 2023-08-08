@@ -33,7 +33,7 @@ public class UsuarioController {
     
     @GetMapping("/listado")
     public String inicio(Model model){
-        var usuarios = usuarioService.getUsuario();
+        var usuarios = usuarioService.getUsuarios();
         model.addAttribute("usuarios", usuarios);
         model.addAttribute("totalUsuarios", usuarios.size());
         return "/usuario/listado";

@@ -12,7 +12,7 @@ import java.util.List;
  * @author PC
  */
 public interface UsuarioService {
-    public List<Usuario> getUsuario();
+    public List<Usuario> getUsuarios();
     
     public Usuario getUsuario (Usuario usuario);
     
@@ -22,7 +22,7 @@ public interface UsuarioService {
     
     public Usuario getUsuarioPorUsernameOCorreo (String username, String correo);
     
-    public boolean existsUsuarioPorUsernameOCorreo (String username, String correo);
+    public boolean existeUsuarioPorUsernameOCorreo (String username, String correo);
     
     public void save (Usuario usuario, boolean crearRolUser);
     

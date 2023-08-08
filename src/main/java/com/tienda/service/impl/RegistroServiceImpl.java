@@ -72,7 +72,7 @@ public class RegistroServiceImpl implements RegistroService {
             throws MessagingException {
         String mensaje;
         if (!usuarioService.
-                existsUsuarioPorUsernameOCorreo(
+                existeUsuarioPorUsernameOCorreo(
                         usuario.getUsername(),
                         usuario.getCorreo())){
             String clave = demeClave();
@@ -160,7 +160,7 @@ public class RegistroServiceImpl implements RegistroService {
     private void enviaCorreoActivar(Usuario usuario, String clave) throws MessagingException {
         String mensaje = messageSource.getMessage(
                 "registro.correo.activar",
-                null, Local.getDefault());
+                null, Locale.getDefault());
         mensaje = String.format(
                 mensaje, usuario.getNombre(),
                 usuario.getApellidos(), servidor,
@@ -169,6 +169,7 @@ public class RegistroServiceImpl implements RegistroService {
                 "registro.mensaje.activacion",
                 null, Locale.getDefault());
         correoService.enviarCorreoHtml(usuario.getCorreo(), asunto, mensaje);
+    }
         
         private void enviaCorreoRecordar(Usuario usuario, String clave) throws MessagingException {
             String mensaje = messageSource.getMessage(""
